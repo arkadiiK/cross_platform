@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Лаб 2 - Планети</title>
+    <title>Лаб 3 - Інтерактивні елементи</title>
     
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
@@ -16,23 +16,75 @@
     
     <ion-app>
 
-      <ion-header>
-        <ion-toolbar color="primary">
-          <ion-title>Планети Сонячної системи</ion-title>
-        </ion-toolbar>
-      </ion-header>
-
-      <ion-router use-hash="false">
+      <ion-router use-hash="true">
         <ion-route url="/" component="page-home"></ion-route>
-        
-        <ion-route url="/planet/:id" component="page-planet-detail"></ion-route>
+        <ion-route url="/planet/:name" component="page-planet-detail"></ion-route>
       </ion-router>
 
-      <ion-content class="ion-padding">
-        <ion-router-outlet></ion-router-outlet>
-      </ion-content>
+      <ion-router-outlet></ion-router-outlet>
+
+      <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+        <ion-fab-button id="add-planet-modal">
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+
+      <ion-modal trigger="add-planet-modal">
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-button id="close-add-planet-modal">Закрити</ion-button>
+            </ion-buttons>
+            <ion-title>Додати нову планету</ion-title>
+            <ion-buttons slot="end">
+              <ion-button id="confirm-add-planet">Додати</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        
+        <ion-content class="ion-padding">
+          <ion-list>
+            <ion-item>
+              <ion-label position="stacked">Назва планети</ion-label>
+              <ion-input id="planetName" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Посилання на зображення</ion-label>
+              <ion-input id="planetImage" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Опис</ion-label>
+              <ion-textarea id="planetDescription" required></ion-textarea>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Температура</ion-label>
+              <ion-input id="planetTemperature"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Маса</ion-label>
+              <ion-input id="planetMass" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Атмосфера</ion-label>
+              <ion-input id="planetAtmosphere"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Супутники (через кому)</ion-label>
+              <ion-textarea id="planetSatellites"></ion-textarea>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Місії (через кому)</ion-label>
+              <ion-textarea id="planetMissions"></ion-textarea>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-modal>
 
     </ion-app>
 
-    <script src="data.js"></script> <script src="app.js"></script>   </body>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+    <script type="module" src="addPlanetModal.js"></script>
+
+</body>
 </html>
