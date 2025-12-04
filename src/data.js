@@ -1,5 +1,4 @@
-// Дані про планети 
-const planets = [
+export const planets = [
   {
     id: 'mercury',
     name: 'Меркурій',

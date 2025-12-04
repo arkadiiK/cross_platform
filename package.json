@@ -1,0 +1,31 @@
+{
+  "name": "cross_platform",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000c\u0000r\u0000o\u0000s\u0000s\u0000_\u0000p\u0000l\u0000a\u0000t\u0000f\u0000o\u0000r\u0000m\u0000\r\u0000 \u0000 \u00045\u00047\u0004C\u0004;\u0004L\u0004B\u00040\u0004B\u00048\u0004 \u0000@\u0004>\u00041\u0004>\u0004B\u00048\u0004:\u0000\r\u0000 \u0000!\u0000[\u0000a\u0000l\u0000t\u0000 \u0000t\u0000e\u0000x\u0000t\u0000]\u0000(\u0000i\u0000m\u0000a\u0000g\u0000e\u00007\u0000.\u0000p\u0000n\u0000g\u0000)\u0000\r\u0000 \u0000",
+  "main": "addPlanetModal.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arkadiiK/cross_platform.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arkadiiK/cross_platform/issues"
+  },
+  "homepage": "https://github.com/arkadiiK/cross_platform#readme",
+  "devDependencies": {
+    "@capacitor/android": "^7.4.4",
+    "@capacitor/cli": "^7.4.4",
+    "@capacitor/core": "^7.4.4",
+    "@capacitor/preferences": "^7.0.2",
+    "vite": "^7.2.6"
+  },
+  "dependencies": {
+    "@ionic/core": "^8.7.11"
+  }
+}

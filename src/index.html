@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Лаб 3 - Інтерактивні елементи</title>
-    
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" rel="stylesheet">
-
-    <script type="module" src="https://unpkg.com/ionicons/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons/dist/ionicons/ionicons.js"></script>
-</head>
+    <title>Лаб 5 - Capacitor</title>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+      <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    </head>
 <body>
     
     <ion-app>
@@ -21,13 +17,7 @@
         <ion-route url="/planet/:name" component="page-planet-detail"></ion-route>
       </ion-router>
 
-      <ion-router use-hash="true">
-        <ion-route url="/" component="page-home"></ion-route>
-        <ion-route url="/planet/:name" component="page-planet-detail"></ion-route>
-      </ion-router>
-
       <ion-router-outlet></ion-router-outlet>
-      <ion-loading message="Завантаження..."></ion-loading>
 
       <ion-fab slot="fixed" vertical="bottom" horizontal="end">
         <ion-fab-button id="add-planet-modal">
@@ -88,8 +78,7 @@
 
     </ion-app>
 
-    <script src="data.js"></script>
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
     <script type="module" src="addPlanetModal.js"></script>
 
 </body>

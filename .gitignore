@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Production
+build/
+dist/
+www/
+
+# Android/Capacitor specific
+android/app/build/
+android/.gradle/
+android/capacitor.settings.gradle
+capacitor.config.json.timestamp
+
+# IDE & System
+.idea/
+.vscode/
+.DS_Store
+*.log
