@@ -1,6 +1,9 @@
 import { Preferences } from '@capacitor/preferences';
 import { planets } from './data.js';
+import { defineCustomElements } from '@ionic/pwa-elements/loader';
+import './galleryPage.js'; 
 
+defineCustomElements(window);
 
 class HomePage extends HTMLElement {
   constructor() {
@@ -47,6 +50,13 @@ class HomePage extends HTMLElement {
       <ion-header>
         <ion-toolbar color="primary">
           <ion-title>Планети Сонячної системи</ion-title>
+          
+          <ion-buttons slot="end">
+            <ion-button href="/gallery">
+               <ion-icon slot="icon-only" name="images"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+
         </ion-toolbar>
       </ion-header>
 
@@ -77,6 +87,11 @@ class HomePage extends HTMLElement {
             `).join('')}
           </ion-row>
         </ion-grid>
+        <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+          <ion-fab-button id="add-planet-modal">
+            <ion-icon name="add"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
       </ion-content>
     `;
 

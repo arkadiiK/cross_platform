@@ -15,15 +15,12 @@
       <ion-router use-hash="true">
         <ion-route url="/" component="page-home"></ion-route>
         <ion-route url="/planet/:name" component="page-planet-detail"></ion-route>
+
+        <ion-route url="/gallery" component="page-gallery"></ion-route>
+
       </ion-router>
 
       <ion-router-outlet></ion-router-outlet>
-
-      <ion-fab slot="fixed" vertical="bottom" horizontal="end">
-        <ion-fab-button id="add-planet-modal">
-          <ion-icon name="add"></ion-icon>
-        </ion-fab-button>
-      </ion-fab>
 
       <ion-modal trigger="add-planet-modal">
         <ion-header>

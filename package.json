@@ -22,10 +22,13 @@
     "@capacitor/android": "^7.4.4",
     "@capacitor/cli": "^7.4.4",
     "@capacitor/core": "^7.4.4",
-    "@capacitor/preferences": "^7.0.2",
+    "@capacitor/preferences": "^7.0.3",
     "vite": "^7.2.6"
   },
   "dependencies": {
-    "@ionic/core": "^8.7.11"
+    "@capacitor/camera": "^7.0.3",
+    "@capacitor/dialog": "^7.0.3",
+    "@ionic/core": "^8.7.11",
+    "@ionic/pwa-elements": "^3.3.0"
   }
 }
